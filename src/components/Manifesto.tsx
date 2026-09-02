@@ -1,8 +1,17 @@
 export default function Manifesto() {
   return (
     <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-zenji-black via-zenji-gray/50 to-zenji-black" />
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      {/* Background with overlay */}
+      <div className="absolute inset-0 bg-zenji-black/80 z-10" />
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-5.webp')",
+        }}
+      />
+
+      <div className="relative z-20 max-w-4xl mx-auto text-center">
         <p className="text-xs uppercase tracking-[0.3em] text-zenji-gray-light mb-4">
           MANIFESTO_001
         </p>

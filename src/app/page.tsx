@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import FeaturedProducts from "@/components/FeaturedProducts";
+import NewsCarousel from "@/components/NewsCarousel";
 import ProductGrid from "@/components/ProductGrid";
 import Manifesto from "@/components/Manifesto";
 import { products } from "@/data/products";
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <FeaturedProducts products={products} />
+      <NewsCarousel />
       <ProductGrid products={products} />
       <Manifesto />
     </>

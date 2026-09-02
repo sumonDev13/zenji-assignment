@@ -3,7 +3,19 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-zenji-gray/50 to-zenji-black" />
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
+      {/* Content */}
       <div className="relative z-10 text-center px-4">
         <p className="text-sm uppercase tracking-[0.3em] mb-4 text-zenji-gray-light">
           System // ZENJI

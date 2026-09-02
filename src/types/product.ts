@@ -7,6 +7,7 @@ export interface Product {
   images: {
     front: string;
     back: string;
+    onModel?: string;
   };
   collection: string;
   description: string;
@@ -15,7 +16,14 @@ export interface Product {
   isNew?: boolean;
   isSale?: boolean;
   salePercentage?: number;
+  lookbookBadge?: LookbookBadge;
 }
+
+export type LookbookBadge =
+  | "SALE"
+  | "LIMITED"
+  | "THE_ORIGIN_DROP"
+  | "NEW_ARRIVAL";
 
 export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL";
 

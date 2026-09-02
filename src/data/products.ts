@@ -10,6 +10,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -19,6 +20,7 @@ export const products: Product[] = [
     isNew: true,
     isSale: true,
     salePercentage: 15,
+    lookbookBadge: "SALE",
   },
   {
     id: "2",
@@ -28,6 +30,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -35,6 +38,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Black"],
     isNew: true,
+    lookbookBadge: "LIMITED",
   },
   {
     id: "3",
@@ -45,6 +49,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -54,6 +59,7 @@ export const products: Product[] = [
     isNew: true,
     isSale: true,
     salePercentage: 15,
+    lookbookBadge: "SALE",
   },
   {
     id: "4",
@@ -63,6 +69,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -70,6 +77,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Black"],
     isNew: true,
+    lookbookBadge: "THE_ORIGIN_DROP",
   },
   {
     id: "5",
@@ -79,6 +87,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -86,6 +95,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Black"],
     isNew: true,
+    lookbookBadge: "LIMITED",
   },
   {
     id: "6",
@@ -95,6 +105,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -102,6 +113,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Black"],
     isNew: true,
+    lookbookBadge: "LIMITED",
   },
   {
     id: "7",
@@ -111,6 +123,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -118,6 +131,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Black"],
     isNew: true,
+    lookbookBadge: "THE_ORIGIN_DROP",
   },
   {
     id: "8",
@@ -128,6 +142,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-2.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-4.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-1.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -137,6 +152,7 @@ export const products: Product[] = [
     isNew: true,
     isSale: true,
     salePercentage: 15,
+    lookbookBadge: "SALE",
   },
   {
     id: "9",
@@ -146,6 +162,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -153,6 +170,7 @@ export const products: Product[] = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Black"],
     isNew: true,
+    lookbookBadge: "NEW_ARRIVAL",
   },
   {
     id: "10",
@@ -163,6 +181,7 @@ export const products: Product[] = [
     images: {
       front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-2.webp",
+      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -172,6 +191,7 @@ export const products: Product[] = [
     isNew: true,
     isSale: true,
     salePercentage: 15,
+    lookbookBadge: "SALE",
   },
 ];
 

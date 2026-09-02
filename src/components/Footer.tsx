@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-zenji-gray-dark/30 py-12 px-4 sm:px-6 lg:px-8">
@@ -14,28 +16,28 @@ export default function Footer() {
             <h4 className="text-sm uppercase tracking-wider mb-4">DROPS</h4>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link
                   href="/"
                   className="text-sm text-zenji-gray-light hover:text-zenji-white transition-colors"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/drop"
                   className="text-sm text-zenji-gray-light hover:text-zenji-white transition-colors"
                 >
                   Drop
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/collection"
                   className="text-sm text-zenji-gray-light hover:text-zenji-white transition-colors"
                 >
                   Collection
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -43,28 +45,28 @@ export default function Footer() {
             <h4 className="text-sm uppercase tracking-wider mb-4">EXPLORE</h4>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link
                   href="/lookbook"
                   className="text-sm text-zenji-gray-light hover:text-zenji-white transition-colors"
                 >
                   Lookbook
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/our-story"
                   className="text-sm text-zenji-gray-light hover:text-zenji-white transition-colors"
                 >
                   Our Story
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/collection"
                   className="text-sm text-zenji-gray-light hover:text-zenji-white transition-colors"
                 >
                   Collection
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -109,18 +111,18 @@ export default function Footer() {
             © 2026 ZENJI. All drops are final. No restocks. Ever.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a
+            <Link
               href="/privacy-policy"
               className="text-xs text-zenji-gray-light hover:text-zenji-white transition-colors"
             >
               Privacy
-            </a>
-            <a
+            </Link>
+            <Link
               href="/terms"
               className="text-xs text-zenji-gray-light hover:text-zenji-white transition-colors"
             >
               Terms
-            </a>
+            </Link>
           </div>
         </div>
       </div>

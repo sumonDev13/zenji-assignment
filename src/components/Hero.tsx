@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
@@ -11,12 +13,12 @@ export default function Hero() {
           <br />
           STORY
         </h1>
-        <a
+        <Link
           href="/drop"
           className="inline-block border border-zenji-white px-8 py-4 text-sm uppercase tracking-wider hover:bg-zenji-white hover:text-zenji-black transition-all duration-300"
         >
           SHOP THE DROP →
-        </a>
+        </Link>
       </div>
     </section>
   );

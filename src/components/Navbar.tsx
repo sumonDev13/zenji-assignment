@@ -47,21 +47,118 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="text-sm uppercase tracking-wider hover:text-zenji-red transition-colors">
-              Search
+          {/* Desktop Icons */}
+          <div className="hidden md:flex items-center space-x-5">
+            {/* Search Icon */}
+            <button
+              className="hover:text-zenji-red transition-colors"
+              aria-label="Search"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
             </button>
-            <button className="text-sm uppercase tracking-wider hover:text-zenji-red transition-colors">
-              Cart (0)
+
+            {/* User Icon */}
+            <button
+              className="hover:text-zenji-red transition-colors"
+              aria-label="Account"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+            </button>
+
+            {/* Cart Icon */}
+            <button
+              className="hover:text-zenji-red transition-colors relative"
+              aria-label="Cart"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                />
+              </svg>
+              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-zenji-red text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                0
+              </span>
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Icons */}
           <div className="md:hidden flex items-center space-x-4">
-            <button className="text-sm uppercase tracking-wider hover:text-zenji-red transition-colors">
-              Cart (0)
+            {/* Search Icon */}
+            <button
+              className="hover:text-zenji-red transition-colors"
+              aria-label="Search"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
             </button>
+
+            {/* Cart Icon */}
+            <button
+              className="hover:text-zenji-red transition-colors relative"
+              aria-label="Cart"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                />
+              </svg>
+              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-zenji-red text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                0
+              </span>
+            </button>
+
+            {/* Hamburger Menu */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2"
@@ -124,9 +221,42 @@ export default function Navbar() {
           >
             Our Story
           </Link>
-          <div className="pt-4 border-t border-zenji-gray-dark/30">
-            <button className="block text-sm uppercase tracking-wider hover:text-zenji-red transition-colors">
-              Search
+          <div className="pt-4 border-t border-zenji-gray-dark/30 flex items-center space-x-6">
+            <button
+              className="hover:text-zenji-red transition-colors"
+              aria-label="Search"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button
+              className="hover:text-zenji-red transition-colors"
+              aria-label="Account"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
             </button>
           </div>
         </div>

@@ -77,11 +77,11 @@ export default function Footer() {
           </div>
 
           {/* Right Columns - Links */}
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:col-span-8">
-            {/* DROPS */}
+          <div className="grid grid-cols-2 gap-8 lg:col-span-8">
+            {/* NAVIGATION */}
             <div>
               <h4 className="mb-6 text-xs tracking-[0.2em] text-gray-500 uppercase">
-                DROPS
+                NAVIGATION
               </h4>
               <ul className="space-y-4">
                 <li>
@@ -108,15 +108,6 @@ export default function Footer() {
                     Collection
                   </Link>
                 </li>
-              </ul>
-            </div>
-
-            {/* EXPLORE */}
-            <div>
-              <h4 className="mb-6 text-xs tracking-[0.2em] text-gray-500 uppercase">
-                EXPLORE
-              </h4>
-              <ul className="space-y-4">
                 <li>
                   <Link
                     href="/lookbook"
@@ -133,21 +124,13 @@ export default function Footer() {
                     Our Story
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/collection"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    Collection
-                  </Link>
-                </li>
               </ul>
             </div>
 
-            {/* COMMUNITY */}
+            {/* CONNECT */}
             <div>
               <h4 className="mb-6 text-xs tracking-[0.2em] text-gray-500 uppercase">
-                COMMUNITY
+                CONNECT
               </h4>
               <ul className="space-y-4">
                 <li>
@@ -182,71 +165,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
-            {/* CONTACT */}
-            <div>
-              <h4 className="mb-6 text-xs tracking-[0.2em] text-gray-500 uppercase">
-                CONTACT
-              </h4>
-              <ul className="space-y-4">
-                <li>
-                  <Link
-                    href="/faq"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/review"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    Review
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy-policy"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/terms"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    Terms
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/faq"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    Help
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/return-policy"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    Return Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-sm text-white transition-colors hover:text-[#8CC63F]"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
 
@@ -255,30 +173,10 @@ export default function Footer() {
           <p className="font-mono text-xs text-gray-500">
             © 2026 ZENJI. All drops are final. No restocks. Ever.
           </p>
-          <div className="flex items-center gap-6 text-xs">
-            <Link
-              href="/privacy-policy"
-              className="text-gray-500 transition-colors hover:text-white"
-            >
-              Privacy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-500 transition-colors hover:text-white"
-            >
-              Terms
-            </Link>
-            <Link
-              href="/privacy-policy#cookies"
-              className="text-gray-500 transition-colors hover:text-white"
-            >
-              Cookies
-            </Link>
-            <span className="flex items-center gap-2 text-gray-500">
-              <span className="h-2 w-2 rounded-full bg-[#8CC63F]" />
-              Anime-inspired. Gamer-built. Community-owned.
-            </span>
-          </div>
+          <span className="flex items-center gap-2 text-xs text-gray-500">
+            <span className="h-2 w-2 rounded-full bg-[#8CC63F]" />
+            Anime-inspired. Gamer-built. Community-owned.
+          </span>
         </div>
       </div>
     </footer>

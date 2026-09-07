@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Product, Size } from "@/types/product";
+import ProductCard from "./ProductCard";
 
 interface ProductPageProps {
   product: Product;
@@ -200,31 +201,12 @@ export default function ProductPage({ product, relatedProducts }: ProductPagePro
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {relatedProducts.slice(0, 4).map((item) => (
-              <Link
+              <ProductCard
                 key={item.id}
-                href={`/drop/${item.slug}`}
-                className="group cursor-pointer"
-              >
-                <div className="aspect-square bg-zenji-gray rounded-lg mb-3 overflow-hidden relative">
-                  <Image
-                    src={item.images.front}
-                    alt={item.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h3 className="text-sm uppercase tracking-wider">{item.name}</h3>
-                <p className="text-sm text-zenji-gray-light mt-1">
-                  {item.isSale ? (
-                    <>
-                      <span className="text-zenji-red">A${item.salePrice?.toFixed(2)}</span>
-                      <span className="line-through ml-2">A${item.price.toFixed(2)}</span>
-                    </>
-                  ) : (
-                    `A${item.price.toFixed(2)}`
-                  )}
-                </p>
-              </Link>
+                product={item}
+                showQuickView={false}
+                imageHover="scale"
+              />
             ))}
           </div>
         </div>

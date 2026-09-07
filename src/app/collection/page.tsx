@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import CollectionPage from "@/components/CollectionPage";
+import CollectionPage from "@/components/collection/CollectionPage";
 import { collections } from "@/data/products";
 
 export const metadata: Metadata = {

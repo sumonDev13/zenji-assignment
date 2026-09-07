@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ProductPage from "@/components/ProductPage";
+import ProductPage from "@/components/product/ProductPage";
 import { products } from "@/data/products";
 
 interface PageProps {

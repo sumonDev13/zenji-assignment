@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import DropPage from "@/components/DropPage";
+import DropPage from "@/components/product/DropPage";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {

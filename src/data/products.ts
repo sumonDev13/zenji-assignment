@@ -8,9 +8,11 @@ export const products: Product[] = [
     price: 39.99,
     salePrice: 33.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Blue-flame-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -28,9 +30,11 @@ export const products: Product[] = [
     slug: "bushido-tee",
     price: 39.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Bushido-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -47,9 +51,11 @@ export const products: Product[] = [
     price: 39.99,
     salePrice: 33.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Demon-blood-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -67,9 +73,11 @@ export const products: Product[] = [
     slug: "domain-expansion-tee",
     price: 39.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Domain-expansion-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -85,9 +93,11 @@ export const products: Product[] = [
     slug: "free-soul-tee",
     price: 39.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Free-soul-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -103,9 +113,11 @@ export const products: Product[] = [
     slug: "limitless-tee",
     price: 39.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Limitless-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -121,9 +133,11 @@ export const products: Product[] = [
     slug: "paradise-spirit-tee",
     price: 39.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Paradise-spirit-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -140,9 +154,11 @@ export const products: Product[] = [
     price: 39.99,
     salePrice: 33.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-2.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-2.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-4.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-1.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Warrior-spirit-1.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -160,9 +176,11 @@ export const products: Product[] = [
     slug: "water-breathing-tee",
     price: 39.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Water-breathing-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:
@@ -179,9 +197,11 @@ export const products: Product[] = [
     price: 39.99,
     salePrice: 33.99,
     images: {
-      front: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-1.webp",
+      front:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-1.webp",
       back: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-2.webp",
-      onModel: "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-5.webp",
+      onModel:
+        "https://res.cloudinary.com/diqbikizp/image/upload/f_auto,q_auto/zenji/products/Will-of-the-sun-5.webp",
     },
     collection: "THE_ORIGIN_DROP",
     description:

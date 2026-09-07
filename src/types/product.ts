@@ -19,21 +19,11 @@ export interface Product {
   lookbookBadge?: LookbookBadge;
 }
 
-export type LookbookBadge =
-  | "SALE"
-  | "LIMITED"
-  | "THE_ORIGIN_DROP"
-  | "NEW_ARRIVAL";
+export type LookbookBadge = "SALE" | "LIMITED" | "THE_ORIGIN_DROP" | "NEW_ARRIVAL";
 
 export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL";
 
-export type Color =
-  | "Black"
-  | "White"
-  | "Red"
-  | "Blue"
-  | "Green"
-  | "Grey";
+export type Color = "Black" | "White" | "Red" | "Blue" | "Green" | "Grey";
 
 export interface Collection {
   id: string;

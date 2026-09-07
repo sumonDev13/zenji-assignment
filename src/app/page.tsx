@@ -1,7 +1,7 @@
-import Hero from "@/components/Hero";
-import NewsCarousel from "@/components/NewsCarousel";
-import ProductGrid from "@/components/ProductGrid";
-import Manifesto from "@/components/Manifesto";
+import Hero from "@/components/home/Hero";
+import NewsCarousel from "@/components/home/NewsCarousel";
+import ProductGrid from "@/components/product/ProductGrid";
+import Manifesto from "@/components/home/Manifesto";
 import { products } from "@/data/products";
 
 export default function Home() {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Collection } from "@/types/product";
-import ProductCard from "./ProductCard";
+import ProductCard from "@/components/product/ProductCard";
 
 interface CollectionPageProps {
   collections: Collection[];

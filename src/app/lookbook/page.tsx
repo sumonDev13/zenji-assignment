@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import LookbookPage from "@/components/LookbookPage";
+import LookbookPage from "@/components/lookbook/LookbookPage";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {

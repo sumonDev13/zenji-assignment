@@ -26,8 +26,7 @@ const brandInfo = [
   },
   {
     label: "Pricing",
-    value:
-      "ZENJI tees are A$39.99, with selected pieces on sale at A$33.99.",
+    value: "ZENJI tees are A$39.99, with selected pieces on sale at A$33.99.",
   },
   {
     label: "Influences",
@@ -55,12 +54,12 @@ export default function OurStoryPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative py-20 px-4 sm:px-6 lg:px-8 border-b border-zenji-gray-dark/30">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.3em] text-zenji-gray-light mb-6">
+      <div className="border-zenji-gray-dark/30 relative border-b px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-zenji-gray-light mb-6 text-xs tracking-[0.3em] uppercase">
             ABOUT // ZENJI
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase tracking-wider mb-8 leading-tight">
+          <h1 className="font-display mb-8 text-4xl leading-tight tracking-wider uppercase md:text-6xl lg:text-7xl">
             ANIME STREETWEAR AUSTRALIA —
             <br />
             BORN FROM THE
@@ -71,37 +70,33 @@ export default function OurStoryPage() {
       </div>
 
       {/* Brand Story */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8 text-lg md:text-xl text-zenji-gray-light leading-relaxed">
+      <div className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-zenji-gray-light space-y-8 text-lg leading-relaxed md:text-xl">
+            <p>ZENJI began with one belief: what you wear should tell a story.</p>
             <p>
-              ZENJI began with one belief: what you wear should tell a story.
+              Inspired by samurai discipline, anime art and modern street culture, we
+              create premium streetwear for those who choose their own path.
             </p>
             <p>
-              Inspired by samurai discipline, anime art and modern street
-              culture, we create premium streetwear for those who choose their
-              own path.
-            </p>
-            <p>
-              Every ZENJI piece combines Japanese-inspired artwork, powerful
-              symbolism and oversized silhouettes to express courage, creativity
-              and individuality.
+              Every ZENJI piece combines Japanese-inspired artwork, powerful symbolism and
+              oversized silhouettes to express courage, creativity and individuality.
             </p>
 
             {/* Blockquote */}
-            <blockquote className="border-l-2 border-zenji-red pl-6 py-2 my-12">
-              <p className="text-xl md:text-2xl text-zenji-white italic leading-relaxed">
-                ZENJI is more than a name on a shirt. It represents the warrior
-                within, the part of us that keeps moving forward, stays true to
-                itself and refuses to fade into the crowd.
+            <blockquote className="border-zenji-red my-12 border-l-2 py-2 pl-6">
+              <p className="text-zenji-white text-xl leading-relaxed italic md:text-2xl">
+                ZENJI is more than a name on a shirt. It represents the warrior within,
+                the part of us that keeps moving forward, stays true to itself and refuses
+                to fade into the crowd.
               </p>
             </blockquote>
 
             <p>
-              We design for the dreamers, fighters, creators and outsiders
-              shaping their own future.
+              We design for the dreamers, fighters, creators and outsiders shaping their
+              own future.
             </p>
-            <p className="text-zenji-white font-medium text-xl md:text-2xl">
+            <p className="text-zenji-white text-xl font-medium md:text-2xl">
               Wear your story. Wear your spirit. Wear ZENJI.
             </p>
             <p className="text-zenji-gray-light">
@@ -113,7 +108,7 @@ export default function OurStoryPage() {
           <div className="mt-16">
             <Link
               href="/collection"
-              className="inline-block border border-zenji-white px-8 py-4 text-sm uppercase tracking-wider hover:bg-zenji-white hover:text-zenji-black transition-all duration-300"
+              className="border-zenji-white hover:bg-zenji-white hover:text-zenji-black inline-block border px-8 py-4 text-sm tracking-wider uppercase transition-all duration-300"
             >
               EXPLORE THE COLLECTION →
             </Link>
@@ -122,9 +117,9 @@ export default function OurStoryPage() {
       </div>
 
       {/* About ZENJI Info Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-zenji-gray/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display uppercase tracking-wider mb-12">
+      <div className="bg-zenji-gray/30 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="font-display mb-12 text-3xl tracking-wider uppercase md:text-4xl">
             About ZENJI
           </h2>
 
@@ -134,14 +129,14 @@ export default function OurStoryPage() {
                 key={item.label}
                 className={`py-6 ${
                   index !== brandInfo.length - 1
-                    ? "border-b border-zenji-gray-dark/30"
+                    ? "border-zenji-gray-dark/30 border-b"
                     : ""
                 }`}
               >
-                <dt className="text-sm uppercase tracking-wider text-zenji-gray-light mb-2">
+                <dt className="text-zenji-gray-light mb-2 text-sm tracking-wider uppercase">
                   {item.label}
                 </dt>
-                <dd className="text-base text-zenji-white leading-relaxed">
+                <dd className="text-zenji-white text-base leading-relaxed">
                   {item.value}
                 </dd>
               </div>

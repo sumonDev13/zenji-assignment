@@ -12,55 +12,51 @@ export default function FeaturedProducts({ products }: FeaturedProductsProps) {
   const saleProducts = products.filter((p) => p.isSale);
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
+    <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-8 flex items-center justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-zenji-gray-light mb-2">
+            <p className="text-zenji-gray-light mb-2 text-xs tracking-[0.2em] uppercase">
               COLLECTION // THE_ORIGIN_DROP
             </p>
-            <h2 className="text-3xl font-display uppercase tracking-wider">
-              SALE
-            </h2>
+            <h2 className="font-display text-3xl tracking-wider uppercase">SALE</h2>
           </div>
           <Link
             href="/collection"
-            className="text-sm uppercase tracking-wider hover:text-zenji-red transition-colors"
+            className="hover:text-zenji-red text-sm tracking-wider uppercase transition-colors"
           >
             VIEW_ALL
           </Link>
         </div>
 
         {/* Horizontal scrollable product cards */}
-        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+        <div className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
           {saleProducts.map((product) => (
             <Link
               key={product.id}
               href={`/drop/${product.slug}`}
-              className="flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[30vw] snap-center group"
+              className="group w-[85vw] flex-shrink-0 snap-center sm:w-[60vw] md:w-[45vw] lg:w-[30vw]"
             >
-              <div className="relative aspect-[3/4] bg-zenji-gray rounded-lg overflow-hidden mb-4">
+              <div className="bg-zenji-gray relative mb-4 aspect-[3/4] overflow-hidden rounded-lg">
                 <Image
                   src={product.images.front}
                   alt={product.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 640px) 85vw, (max-width: 768px) 60vw, (max-width: 1024px) 45vw, 30vw"
                 />
                 {product.isSale && (
-                  <div className="absolute top-4 left-4 bg-zenji-red text-zenji-white px-3 py-1 text-xs font-medium uppercase tracking-wider">
+                  <div className="bg-zenji-red text-zenji-white absolute top-4 left-4 px-3 py-1 text-xs font-medium tracking-wider uppercase">
                     SALE {product.salePercentage}% OFF
                   </div>
                 )}
               </div>
               <div className="space-y-1">
-                <p className="text-xs uppercase tracking-wider text-zenji-gray-light">
+                <p className="text-zenji-gray-light text-xs tracking-wider uppercase">
                   COLLECTION // {product.collection}
                 </p>
-                <h3 className="text-lg uppercase tracking-wider">
-                  {product.name}
-                </h3>
-                <p className="text-sm uppercase tracking-wider text-zenji-red">
+                <h3 className="text-lg tracking-wider uppercase">{product.name}</h3>
+                <p className="text-zenji-red text-sm tracking-wider uppercase">
                   SHOP {product.name} →
                 </p>
               </div>

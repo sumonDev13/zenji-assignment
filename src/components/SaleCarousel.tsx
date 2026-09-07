@@ -19,9 +19,7 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
   }, [saleProducts.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + saleProducts.length) % saleProducts.length
-    );
+    setCurrentIndex((prev) => (prev - 1 + saleProducts.length) % saleProducts.length);
   }, [saleProducts.length]);
 
   const goToSlide = (index: number) => {
@@ -39,21 +37,19 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
   const currentProduct = saleProducts[currentIndex];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="mb-8 flex items-center justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-zenji-gray-light mb-2">
+            <p className="text-zenji-gray-light mb-2 text-xs tracking-[0.2em] uppercase">
               COLLECTION // THE_ORIGIN_DROP
             </p>
-            <h2 className="text-3xl font-display uppercase tracking-wider">
-              SALE
-            </h2>
+            <h2 className="font-display text-3xl tracking-wider uppercase">SALE</h2>
           </div>
           <Link
             href="/collection"
-            className="text-sm uppercase tracking-wider hover:text-zenji-red transition-colors"
+            className="hover:text-zenji-red text-sm tracking-wider uppercase transition-colors"
           >
             VIEW_ALL
           </Link>
@@ -62,7 +58,7 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
         {/* Main Carousel */}
         <div className="relative">
           {/* Large Product Display */}
-          <div className="relative aspect-[16/9] md:aspect-[21/9] bg-zenji-gray rounded-lg overflow-hidden group">
+          <div className="bg-zenji-gray group relative aspect-[16/9] overflow-hidden rounded-lg md:aspect-[21/9]">
             <Image
               src={currentProduct.images.front}
               alt={currentProduct.name}
@@ -76,29 +72,29 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
             {/* Sale Badge */}
-            <div className="absolute top-6 left-6 bg-zenji-red text-zenji-white px-4 py-2 text-sm font-medium uppercase tracking-wider">
+            <div className="bg-zenji-red text-zenji-white absolute top-6 left-6 px-4 py-2 text-sm font-medium tracking-wider uppercase">
               SALE {currentProduct.salePercentage}% OFF
             </div>
 
             {/* Product Info */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-              <p className="text-xs uppercase tracking-[0.2em] text-zenji-gray-light mb-2">
+            <div className="absolute right-0 bottom-0 left-0 p-6 md:p-10">
+              <p className="text-zenji-gray-light mb-2 text-xs tracking-[0.2em] uppercase">
                 COLLECTION // {currentProduct.collection}
               </p>
-              <h3 className="text-3xl md:text-5xl font-display uppercase tracking-wider mb-4">
+              <h3 className="font-display mb-4 text-3xl tracking-wider uppercase md:text-5xl">
                 {currentProduct.name}
               </h3>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-2xl md:text-3xl font-medium text-zenji-red">
+              <div className="mb-6 flex items-center gap-4">
+                <span className="text-zenji-red text-2xl font-medium md:text-3xl">
                   A${currentProduct.salePrice?.toFixed(2)}
                 </span>
-                <span className="text-lg md:text-xl text-zenji-gray-light line-through">
+                <span className="text-zenji-gray-light text-lg line-through md:text-xl">
                   A${currentProduct.price.toFixed(2)}
                 </span>
               </div>
               <Link
                 href={`/drop/${currentProduct.slug}`}
-                className="inline-block bg-zenji-white text-zenji-black px-8 py-4 text-sm uppercase tracking-wider font-medium hover:bg-zenji-gray-light transition-colors"
+                className="bg-zenji-white text-zenji-black hover:bg-zenji-gray-light inline-block px-8 py-4 text-sm font-medium tracking-wider uppercase transition-colors"
               >
                 SHOP {currentProduct.name} →
               </Link>
@@ -107,11 +103,11 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-black/50 hover:bg-black/70 rounded-full transition-colors opacity-0 group-hover:opacity-100"
+              className="absolute top-1/2 left-4 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 opacity-0 transition-colors group-hover:opacity-100 hover:bg-black/70"
               aria-label="Previous slide"
             >
               <svg
-                className="w-6 h-6"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -126,11 +122,11 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-black/50 hover:bg-black/70 rounded-full transition-colors opacity-0 group-hover:opacity-100"
+              className="absolute top-1/2 right-4 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 opacity-0 transition-colors group-hover:opacity-100 hover:bg-black/70"
               aria-label="Next slide"
             >
               <svg
-                className="w-6 h-6"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -151,9 +147,9 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
               <button
                 key={product.id}
                 onClick={() => goToSlide(index)}
-                className={`relative w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+                className={`relative h-16 w-16 overflow-hidden rounded-lg transition-all duration-300 md:h-20 md:w-20 ${
                   index === currentIndex
-                    ? "ring-2 ring-zenji-white scale-110"
+                    ? "ring-zenji-white scale-110 ring-2"
                     : "opacity-50 hover:opacity-75"
                 }`}
               >
@@ -176,8 +172,8 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
                 onClick={() => goToSlide(index)}
                 className={`h-1 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "w-8 bg-zenji-white"
-                    : "w-2 bg-zenji-gray-dark hover:bg-zenji-gray-light"
+                    ? "bg-zenji-white w-8"
+                    : "bg-zenji-gray-dark hover:bg-zenji-gray-light w-2"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -188,16 +184,16 @@ export default function SaleCarousel({ products }: SaleCarouselProps) {
           <div className="mt-4 flex justify-center">
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="text-xs uppercase tracking-wider text-zenji-gray-light hover:text-zenji-white transition-colors flex items-center gap-2"
+              className="text-zenji-gray-light hover:text-zenji-white flex items-center gap-2 text-xs tracking-wider uppercase transition-colors"
             >
               {isAutoPlaying ? (
                 <>
-                  <span className="w-2 h-2 bg-zenji-red rounded-full animate-pulse" />
+                  <span className="bg-zenji-red h-2 w-2 animate-pulse rounded-full" />
                   AUTOPLAY ON
                 </>
               ) : (
                 <>
-                  <span className="w-2 h-2 bg-zenji-gray-dark rounded-full" />
+                  <span className="bg-zenji-gray-dark h-2 w-2 rounded-full" />
                   AUTOPLAY OFF
                 </>
               )}

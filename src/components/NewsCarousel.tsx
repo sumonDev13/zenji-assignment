@@ -103,7 +103,7 @@ export default function NewsCarousel() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative w-full h-[70vh] md:h-[80vh] overflow-hidden bg-black">
+    <section className="relative h-[70vh] w-full overflow-hidden bg-black md:h-[80vh]">
       {/* Background Images with Crossfade */}
       {slides.map((s, index) => (
         <div
@@ -127,13 +127,13 @@ export default function NewsCarousel() {
       <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+      <div className="relative z-10 flex h-full flex-col justify-between p-6 md:p-12 lg:p-16">
         {/* Main Content */}
-        <div className="flex-1 flex items-center">
-          <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 max-w-6xl">
+        <div className="flex flex-1 items-center">
+          <div className="flex max-w-6xl flex-col items-start gap-8 md:flex-row md:gap-12">
             {/* Shield/Crest Image */}
-            <div className="flex-shrink-0 hidden md:block">
-              <div className="relative w-48 h-56 lg:w-56 lg:h-64">
+            <div className="hidden flex-shrink-0 md:block">
+              <div className="relative h-56 w-48 lg:h-64 lg:w-56">
                 {/* Shield Shape */}
                 <div
                   className="absolute inset-0 overflow-hidden"
@@ -164,36 +164,36 @@ export default function NewsCarousel() {
             </div>
 
             {/* Text Content */}
-            <div className="flex-1 max-w-2xl">
+            <div className="max-w-2xl flex-1">
               {/* Date */}
-              <p className="text-[#8CC63F] text-sm font-semibold uppercase tracking-[0.2em] mb-4">
+              <p className="mb-4 text-sm font-semibold tracking-[0.2em] text-[#8CC63F] uppercase">
                 {slide.date}
               </p>
 
               {/* Headline */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 max-w-xl">
+              <h2 className="mb-4 max-w-xl text-3xl leading-tight font-bold text-white md:text-4xl lg:text-5xl">
                 {slide.headline}
               </h2>
 
               {/* Green Double Underline */}
-              <div className="flex flex-col gap-1 mb-6 w-16">
+              <div className="mb-6 flex w-16 flex-col gap-1">
                 <div className="h-[2px] bg-[#8CC63F]" />
                 <div className="h-[2px] bg-[#8CC63F]" />
               </div>
 
               {/* Excerpt */}
-              <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
+              <p className="mb-8 max-w-lg text-base leading-relaxed text-gray-400 md:text-lg">
                 {slide.excerpt}
               </p>
 
               {/* Read More */}
               <Link
                 href={slide.link}
-                className="inline-flex items-center gap-2 text-white text-sm font-semibold uppercase tracking-wider hover:text-[#8CC63F] transition-colors group"
+                className="group inline-flex items-center gap-2 text-sm font-semibold tracking-wider text-white uppercase transition-colors hover:text-[#8CC63F]"
               >
                 READ MORE
                 <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -217,12 +217,12 @@ export default function NewsCarousel() {
             {/* Play/Pause Button */}
             <button
               onClick={togglePlay}
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 hover:border-[#8CC63F] transition-colors"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 transition-colors hover:border-[#8CC63F]"
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? (
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="h-4 w-4 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -231,7 +231,7 @@ export default function NewsCarousel() {
                 </svg>
               ) : (
                 <svg
-                  className="w-4 h-4 text-white ml-0.5"
+                  className="ml-0.5 h-4 w-4 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -245,7 +245,7 @@ export default function NewsCarousel() {
               {slides.map((_, index) => (
                 <div
                   key={index}
-                  className="w-16 md:w-24 h-1 bg-white/20 rounded-full overflow-hidden"
+                  className="h-1 w-16 overflow-hidden rounded-full bg-white/20 md:w-24"
                 >
                   <div
                     className="h-full bg-[#8CC63F] transition-all duration-100"
@@ -254,8 +254,8 @@ export default function NewsCarousel() {
                         index < currentSlide
                           ? "100%"
                           : index === currentSlide
-                          ? `${progress}%`
-                          : "0%",
+                            ? `${progress}%`
+                            : "0%",
                     }}
                   />
                 </div>
@@ -264,14 +264,14 @@ export default function NewsCarousel() {
           </div>
 
           {/* Right: Prev/Next Button */}
-          <div className="flex items-center bg-[#8CC63F] rounded-full overflow-hidden">
+          <div className="flex items-center overflow-hidden rounded-full bg-[#8CC63F]">
             <button
               onClick={prevSlide}
-              className="px-4 py-3 hover:bg-[#7ab535] transition-colors"
+              className="px-4 py-3 transition-colors hover:bg-[#7ab535]"
               aria-label="Previous slide"
             >
               <svg
-                className="w-5 h-5 text-black"
+                className="h-5 w-5 text-black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -285,14 +285,14 @@ export default function NewsCarousel() {
               </svg>
             </button>
             {/* Vertical Divider */}
-            <div className="w-px h-6 bg-black/20" />
+            <div className="h-6 w-px bg-black/20" />
             <button
               onClick={nextSlide}
-              className="px-4 py-3 hover:bg-[#7ab535] transition-colors"
+              className="px-4 py-3 transition-colors hover:bg-[#7ab535]"
               aria-label="Next slide"
             >
               <svg
-                className="w-5 h-5 text-black"
+                className="h-5 w-5 text-black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

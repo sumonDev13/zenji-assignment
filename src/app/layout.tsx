@@ -28,17 +28,13 @@ export const metadata: Metadata = {
   keywords: ["anime streetwear", "streetwear", "anime", "gaming", "zenji"],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${bebasNeue.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-zenji-black text-zenji-white">
+      <body className="bg-zenji-black text-zenji-white flex min-h-full flex-col">
         <AnnouncementBar />
         <Navbar />
         <main className="flex-1">{children}</main>

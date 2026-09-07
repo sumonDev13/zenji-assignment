@@ -40,21 +40,19 @@ export default function VerticalCarousel({ products }: VerticalCarouselProps) {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="mb-8 flex items-center justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-zenji-gray-light mb-2">
+            <p className="text-zenji-gray-light mb-2 text-xs tracking-[0.2em] uppercase">
               COLLECTION // THE_ORIGIN_DROP
             </p>
-            <h2 className="text-3xl font-display uppercase tracking-wider">
-              SALE
-            </h2>
+            <h2 className="font-display text-3xl tracking-wider uppercase">SALE</h2>
           </div>
           <Link
             href="/collection"
-            className="text-sm uppercase tracking-wider hover:text-zenji-red transition-colors"
+            className="hover:text-zenji-red text-sm tracking-wider uppercase transition-colors"
           >
             VIEW_ALL
           </Link>
@@ -65,15 +63,12 @@ export default function VerticalCarousel({ products }: VerticalCarouselProps) {
           {/* Main Carousel */}
           <div
             ref={containerRef}
-            className="flex-1 h-[60vh] md:h-[70vh] overflow-y-auto snap-y snap-mandatory scrollbar-hide rounded-lg"
+            className="scrollbar-hide h-[60vh] flex-1 snap-y snap-mandatory overflow-y-auto rounded-lg md:h-[70vh]"
             style={{ scrollBehavior: "smooth" }}
           >
             {saleProducts.map((product) => (
-              <div
-                key={product.id}
-                className="h-full snap-center snap-always pb-4"
-              >
-                <div className="relative h-full bg-zenji-gray rounded-lg overflow-hidden group">
+              <div key={product.id} className="h-full snap-center snap-always pb-4">
+                <div className="bg-zenji-gray group relative h-full overflow-hidden rounded-lg">
                   <Image
                     src={product.images.front}
                     alt={product.name}
@@ -86,29 +81,29 @@ export default function VerticalCarousel({ products }: VerticalCarouselProps) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
                   {/* Sale Badge */}
-                  <div className="absolute top-6 left-6 bg-zenji-red text-zenji-white px-4 py-2 text-sm font-medium uppercase tracking-wider">
+                  <div className="bg-zenji-red text-zenji-white absolute top-6 left-6 px-4 py-2 text-sm font-medium tracking-wider uppercase">
                     SALE {product.salePercentage}% OFF
                   </div>
 
                   {/* Product Info */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <p className="text-xs uppercase tracking-[0.2em] text-zenji-gray-light mb-2">
+                  <div className="absolute right-0 bottom-0 left-0 p-6 md:p-8">
+                    <p className="text-zenji-gray-light mb-2 text-xs tracking-[0.2em] uppercase">
                       COLLECTION // {product.collection}
                     </p>
-                    <h3 className="text-2xl md:text-4xl font-display uppercase tracking-wider mb-3">
+                    <h3 className="font-display mb-3 text-2xl tracking-wider uppercase md:text-4xl">
                       {product.name}
                     </h3>
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xl md:text-2xl font-medium text-zenji-red">
+                    <div className="mb-4 flex items-center gap-3">
+                      <span className="text-zenji-red text-xl font-medium md:text-2xl">
                         A${product.salePrice?.toFixed(2)}
                       </span>
-                      <span className="text-base md:text-lg text-zenji-gray-light line-through">
+                      <span className="text-zenji-gray-light text-base line-through md:text-lg">
                         A${product.price.toFixed(2)}
                       </span>
                     </div>
                     <Link
                       href={`/drop/${product.slug}`}
-                      className="inline-block bg-zenji-white text-zenji-black px-6 py-3 text-sm uppercase tracking-wider font-medium hover:bg-zenji-gray-light transition-colors"
+                      className="bg-zenji-white text-zenji-black hover:bg-zenji-gray-light inline-block px-6 py-3 text-sm font-medium tracking-wider uppercase transition-colors"
                     >
                       SHOP {product.name} →
                     </Link>
@@ -119,18 +114,18 @@ export default function VerticalCarousel({ products }: VerticalCarouselProps) {
           </div>
 
           {/* Side Navigation */}
-          <div className="hidden md:flex flex-col justify-center gap-3">
+          <div className="hidden flex-col justify-center gap-3 md:flex">
             {saleProducts.map((product, index) => (
               <button
                 key={product.id}
                 onClick={() => scrollToCard(index)}
-                className="relative group"
+                className="group relative"
               >
                 <div
-                  className={`w-20 h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+                  className={`h-20 w-20 overflow-hidden rounded-lg transition-all duration-300 ${
                     index === activeIndex
-                      ? "ring-2 ring-zenji-white scale-110"
-                      : "opacity-40 hover:opacity-70 grayscale group-hover:grayscale-0"
+                      ? "ring-zenji-white scale-110 ring-2"
+                      : "opacity-40 grayscale group-hover:grayscale-0 hover:opacity-70"
                   }`}
                 >
                   <Image
@@ -143,43 +138,39 @@ export default function VerticalCarousel({ products }: VerticalCarouselProps) {
                 </div>
                 {/* Active Indicator */}
                 {index === activeIndex && (
-                  <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-2 h-2 bg-zenji-red rounded-full" />
+                  <div className="bg-zenji-red absolute top-1/2 -right-4 h-2 w-2 -translate-y-1/2 rounded-full" />
                 )}
               </button>
             ))}
           </div>
 
           {/* Progress Indicator */}
-          <div className="hidden lg:flex flex-col items-center justify-center gap-2 ml-4">
-            <span className="text-sm font-medium text-zenji-white">
+          <div className="ml-4 hidden flex-col items-center justify-center gap-2 lg:flex">
+            <span className="text-zenji-white text-sm font-medium">
               {String(activeIndex + 1).padStart(2, "0")}
             </span>
-            <div className="w-px h-20 bg-zenji-gray-dark relative">
+            <div className="bg-zenji-gray-dark relative h-20 w-px">
               <div
-                className="absolute top-0 left-0 w-full bg-zenji-red transition-all duration-300"
+                className="bg-zenji-red absolute top-0 left-0 w-full transition-all duration-300"
                 style={{
-                  height: `${
-                    ((activeIndex + 1) / saleProducts.length) * 100
-                  }%`,
+                  height: `${((activeIndex + 1) / saleProducts.length) * 100}%`,
                 }}
               />
             </div>
-            <span className="text-sm text-zenji-gray-light">
+            <span className="text-zenji-gray-light text-sm">
               {String(saleProducts.length).padStart(2, "0")}
             </span>
           </div>
         </div>
 
         {/* Mobile Dots */}
-        <div className="mt-6 flex md:hidden justify-center gap-2">
+        <div className="mt-6 flex justify-center gap-2 md:hidden">
           {saleProducts.map((_, index) => (
             <button
               key={index}
               onClick={() => scrollToCard(index)}
               className={`h-1 rounded-full transition-all duration-300 ${
-                index === activeIndex
-                  ? "w-8 bg-zenji-white"
-                  : "w-2 bg-zenji-gray-dark"
+                index === activeIndex ? "bg-zenji-white w-8" : "bg-zenji-gray-dark w-2"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -188,9 +179,9 @@ export default function VerticalCarousel({ products }: VerticalCarouselProps) {
 
         {/* Scroll Hint */}
         <div className="mt-6 flex justify-center">
-          <div className="flex items-center gap-2 text-zenji-gray-light animate-bounce">
+          <div className="text-zenji-gray-light flex animate-bounce items-center gap-2">
             <svg
-              className="w-4 h-4"
+              className="h-4 w-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -202,9 +193,7 @@ export default function VerticalCarousel({ products }: VerticalCarouselProps) {
                 d="M19 14l-7 7m0 0l-7-7m7 7V3"
               />
             </svg>
-            <span className="text-xs uppercase tracking-wider">
-              Scroll to explore
-            </span>
+            <span className="text-xs tracking-wider uppercase">Scroll to explore</span>
           </div>
         </div>
       </div>

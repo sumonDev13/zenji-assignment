@@ -18,32 +18,32 @@ export default function CollectionPage({ collections }: CollectionPageProps) {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-zenji-gray-light mb-4">
+      <div className="relative px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl text-center">
+          <p className="text-zenji-gray-light mb-4 text-xs tracking-[0.3em] uppercase">
             EXPLORE
           </p>
-          <h1 className="text-5xl md:text-7xl font-display uppercase tracking-wider mb-6">
+          <h1 className="font-display mb-6 text-5xl tracking-wider uppercase md:text-7xl">
             COLLECTION
           </h1>
-          <p className="text-zenji-gray-light max-w-2xl mx-auto">
-            Discover our curated collections of anime-inspired streetwear. Each
-            piece tells a story.
+          <p className="text-zenji-gray-light mx-auto max-w-2xl">
+            Discover our curated collections of anime-inspired streetwear. Each piece
+            tells a story.
           </p>
         </div>
       </div>
 
       {/* Collection Tabs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 flex flex-wrap justify-center gap-4">
           {collections.map((collection) => (
             <button
               key={collection.id}
               onClick={() => setActiveCollection(collection.id)}
-              className={`px-6 py-3 text-sm uppercase tracking-wider transition-colors ${
+              className={`px-6 py-3 text-sm tracking-wider uppercase transition-colors ${
                 activeCollection === collection.id
                   ? "bg-zenji-white text-zenji-black"
-                  : "border border-zenji-gray-dark hover:border-zenji-white"
+                  : "border-zenji-gray-dark hover:border-zenji-white border"
               }`}
             >
               {collection.name}
@@ -53,11 +53,11 @@ export default function CollectionPage({ collections }: CollectionPageProps) {
 
         {/* Collection Description */}
         {currentCollection && (
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-display uppercase tracking-wider mb-4">
+          <div className="mb-12 text-center">
+            <h2 className="font-display mb-4 text-2xl tracking-wider uppercase">
               {currentCollection.name}
             </h2>
-            <p className="text-zenji-gray-light max-w-xl mx-auto">
+            <p className="text-zenji-gray-light mx-auto max-w-xl">
               {currentCollection.description}
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function CollectionPage({ collections }: CollectionPageProps) {
 
         {/* Products Grid */}
         {currentCollection && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-24">
+          <div className="grid grid-cols-1 gap-6 pb-24 sm:grid-cols-2 lg:grid-cols-4">
             {currentCollection.products.map((product) => (
               <ProductCard
                 key={product.id}
